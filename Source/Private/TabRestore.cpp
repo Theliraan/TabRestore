@@ -85,7 +85,8 @@ void FTabRestoreModule::OpenAsset()
 {
     if (AssetEditorSubsystem.IsValid() && OpenAssets.Num() > 0)
     {
-        AssetEditorSubsystem->OpenEditorsForAssets({ OpenAssets.Pop() });
+        const TArray<FString> AssetsToOpen { OpenAssets.Pop() };
+        AssetEditorSubsystem->OpenEditorsForAssets(AssetsToOpen);
     }
 }
 

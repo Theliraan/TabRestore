@@ -17,6 +17,7 @@ public class TabRestore : ModuleRules
             "InputCore",
             "MainFrame",
             "Slate",
+            "SlateCore",
             "UnrealEd"
         });
     }

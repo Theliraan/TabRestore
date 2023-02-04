@@ -1,6 +1,9 @@
 #pragma once
-
 #include <Framework/Commands/Commands.h>
+
+#if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION > 0
+#include <Styling/AppStyle.h>
+#endif
 
 class FTabRestoreCommands : public TCommands<FTabRestoreCommands>
 {
@@ -10,8 +13,12 @@ public:
             TEXT("TabRestore"),
             NSLOCTEXT("Contexts", "TabRestore", "TabRestore Plugin"),
             NAME_None,
+#if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION > 0
+            FAppStyle::GetAppStyleSetName()
+#else
             FEditorStyle::GetStyleSetName()
-        )
+#endif
+            )
     {
     }
 
