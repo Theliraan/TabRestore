@@ -11,8 +11,8 @@ class UAssetEditorSubsystem;
 class FTabRestoreModule : public IModuleInterface
 {
 public:
-	virtual void StartupModule() override;
-	virtual void ShutdownModule() override;
+    virtual void StartupModule() override;
+    virtual void ShutdownModule() override;
 
 private:
     void OnAssetClosed(const TSharedRef<FTabManager::FLayout>&, UObject* EditedObject);

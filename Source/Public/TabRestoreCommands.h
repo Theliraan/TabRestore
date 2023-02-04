@@ -5,18 +5,18 @@
 class FTabRestoreCommands : public TCommands<FTabRestoreCommands>
 {
 public:
-	FTabRestoreCommands()
-		: TCommands<FTabRestoreCommands>(
-			TEXT("TabRestore"),
-			NSLOCTEXT("Contexts", "TabRestore", "TabRestore Plugin"),
-			NAME_None,
-			FEditorStyle::GetStyleSetName()
-		)
-	{
-	}
+    FTabRestoreCommands()
+        : TCommands<FTabRestoreCommands>(
+            TEXT("TabRestore"),
+            NSLOCTEXT("Contexts", "TabRestore", "TabRestore Plugin"),
+            NAME_None,
+            FEditorStyle::GetStyleSetName()
+        )
+    {
+    }
 
-	virtual void RegisterCommands() override;
+    virtual void RegisterCommands() override;
 
 public:
-	TSharedPtr<FUICommandInfo> RestoreClosedTab;
+    TSharedPtr<FUICommandInfo> RestoreClosedTab;
 };

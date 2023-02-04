@@ -5,7 +5,7 @@
 
 void FTabRestoreCommands::RegisterCommands()
 {
-	UI_COMMAND(RestoreClosedTab, "Restore last", "Restore last closed tab", EUserInterfaceActionType::Button, UTabRestoreSettings::Get()->RestoreClosedTab);
+    UI_COMMAND(RestoreClosedTab, "Restore last", "Restore last closed tab", EUserInterfaceActionType::Button, UTabRestoreSettings::Get()->RestoreClosedTab);
 }
 
 #undef LOCTEXT_NAMESPACE
