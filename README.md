@@ -13,10 +13,10 @@ TabRestore - simple Unreal Editor plugin that restore closed tabs. Feel free to 
 - UnrealEngine 4.27 - 5.1 support
 
 ## Usage
-### Way A
+#### Way A
 1. Clone "TabRestore" repository to "%PROJECTNAME%/Plugins" with creating subfolder
 
-### Way B
+#### Way B
 1. Open "%PROJECTNAME%/Plugins"
 2. Create folder "TabRestore"
 3. Copy contents all files from repository to newly created "TabRestore" folder inside your project
