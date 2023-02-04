@@ -1,24 +1,30 @@
 {
-  "FileVersion": 1,
-  "Version": 1,
-  "VersionName": "1.0",
-  "FriendlyName": "Tab Restore",
-  "Description": "Add ability to restore closed tabs",
-  "MarketplaceURL": "",
-  "Category": "Theliraan",
-  "CreatedBy": "Theliraan",
-  "CreatedByURL": "https://github.com/Theliraan",
-  "DocsURL": "https://github.com/Theliraan/TabRestore",
-  "SupportURL": "theliraa@gmail.com",
-  "EngineVersion": "4.26",
-  "EnabledByDefault": true,
-  "CanContainContent": false,
-  "IsBetaVersion": true,
-  "Modules": [
-    {
-      "Name": "TabRestore",
-      "Type": "Editor",
-      "LoadingPhase": "PostEngineInit"
-    }
-  ]
+    "FileVersion": 1,
+    "Version": 1,
+    "VersionName": "1.0",
+    "FriendlyName": "Tab Restore",
+    "Description": "Add ability to restore closed tabs",
+    "MarketplaceURL": "",
+    "Category": "Theliraan",
+    "CreatedBy": "Theliraan",
+    "CreatedByURL": "https://github.com/Theliraan",
+    "DocsURL": "https://github.com/Theliraan/TabRestore",
+    "SupportURL": "theliraa@gmail.com",
+    "EngineVersion": "4.26",
+    "EnabledByDefault": true,
+    "CanContainContent": false,
+    "IsBetaVersion": true,
+    "Modules": [
+        {
+            "Name": "TabRestore",
+            "Type": "Editor",
+            "LoadingPhase": "PostEngineInit"
+        }
+    ],
+    "Plugins": [
+        {
+            "Name": "AssetManagerEditor",
+            "Enabled": true
+        }
+    ]
 }
