@@ -22,6 +22,11 @@ private:
 private:
     FDelegateHandle OnAssetOpenedHandle;
     TSharedPtr<FUICommandList> PluginCommands;
+
+#if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION >= 2
+    TArray<FSoftObjectPath> OpenAssetPaths;
+#else
     TArray<FString> OpenAssets;
+#endif
     TWeakObjectPtr<UAssetEditorSubsystem> AssetEditorSubsystem;
 };

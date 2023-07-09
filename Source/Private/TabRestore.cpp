@@ -67,7 +67,11 @@ void FTabRestoreModule::OnAssetClosed(const TSharedRef<FTabManager::FLayout>&, U
 {
     if (AssetEditorSubsystem.IsValid())
     {
+#if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION >= 2
+        OpenAssetPaths.Push(FSoftObjectPath(EditedObject));
+#else
         OpenAssets.Push(EditedObject->GetPathName());
+#endif
     }
 }
 
@@ -83,11 +87,24 @@ void FTabRestoreModule::OnAssetOpened(UObject* EditedObject, IAssetEditorInstanc
 
 void FTabRestoreModule::OpenAsset()
 {
+#if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION >= 2
+    if (AssetEditorSubsystem.IsValid() && OpenAssetPaths.Num() > 0)
+    {
+        const FSoftObjectPath AssetToOpen = OpenAssetPaths.Pop();
+        if (AssetToOpen.IsValid())
+        {
+            // This is only way that doesn't generate warnings
+            AssetEditorSubsystem->OpenEditorForAsset(AssetToOpen.ResolveObject());
+        }
+    }
+#else
     if (AssetEditorSubsystem.IsValid() && OpenAssets.Num() > 0)
     {
+        // Note: we have no validation here
         const TArray<FString> AssetsToOpen { OpenAssets.Pop() };
         AssetEditorSubsystem->OpenEditorsForAssets(AssetsToOpen);
     }
+#endif
 }
 
 #undef LOCTEXT_NAMESPACE
