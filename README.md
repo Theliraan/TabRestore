@@ -27,7 +27,15 @@ TabRestore - simple Unreal Editor plugin that restore closed tabs. Feel free to 
 2. Open "Edit" -> "Project Settings"
 3. Navigate to "TabRestore" category
 
-![image](https://user-images.githubusercontent.com/3195612/216779990-8bdf8ebc-0a10-4250-8948-0841df6ee4ca.png)
+![Tab Restore. Project Settings](https://user-images.githubusercontent.com/3195612/216779990-8bdf8ebc-0a10-4250-8948-0841df6ee4ca.png)
+
+or
+
+2. Open "Edit" -> "Editor Settings"
+3. Navigate to "General" -> "Keyboard Shortcuts" -> "TabRestore Plugin" category
+
+![TabRestore. Editor Settings](https://github.com/Theliraan/TabRestore/assets/3195612/c4f48ace-d16e-4c87-9c30-0d25d884ce4e)
+
 
 You can configure:
 - Hotkey that restores closed tab. By default: 
