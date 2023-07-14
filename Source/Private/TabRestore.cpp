@@ -1,4 +1,4 @@
-// Copyright Theliraan, 2023. All Rights Reserved.
+// Copyright 2023 Theliraan. All Rights Reserved.
 
 #include "TabRestore.h"
 #include <Developer/Settings/Public/ISettingsModule.h>
