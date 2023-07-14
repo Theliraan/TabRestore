@@ -1,3 +1,5 @@
+// Copyright Theliraan, 2023. All Rights Reserved.
+
 using UnrealBuildTool;
 
 public class TabRestore : ModuleRules

@@ -1,3 +1,5 @@
+// Copyright Theliraan, 2023. All Rights Reserved.
+
 #include "TabRestore.h"
 #include <Developer/Settings/Public/ISettingsModule.h>
 #include <Interfaces/IMainFrameModule.h>
