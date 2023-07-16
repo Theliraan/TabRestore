@@ -15,7 +15,7 @@ public:
     static const UTabRestoreSettings* Get() { return GetDefault<UTabRestoreSettings>(); }
 
 public:
-    UPROPERTY(Config, EditAnywhere, BlueprintReadOnly)
+    UPROPERTY(Config, EditAnywhere, BlueprintReadOnly, Category = "TabRestore")
     FInputChord RestoreClosedTab = FInputChord(FKey(TEXT("T")), 
         // shift
         true,
