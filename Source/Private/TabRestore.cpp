@@ -79,11 +79,14 @@ void FTabRestoreModule::OnAssetClosed(const TSharedRef<FTabManager::FLayout>&, U
 
 void FTabRestoreModule::OnAssetOpened(UObject* EditedObject, IAssetEditorInstance* EditorInstance)
 {
-    if (const auto TabManager = EditorInstance->GetAssociatedTabManager())
+    if (IsValid(EditedObject) && EditedObject->HasAnyFlags(RF_Standalone))
     {
-        FTabManager::FOnPersistLayout CloseWindowHandler;
-        CloseWindowHandler.BindRaw(this, &FTabRestoreModule::OnAssetClosed, EditedObject);
-        TabManager->SetOnPersistLayout(CloseWindowHandler);
+        if (const auto TabManager = EditorInstance->GetAssociatedTabManager())
+        {
+            FTabManager::FOnPersistLayout CloseWindowHandler;
+            CloseWindowHandler.BindRaw(this, &FTabRestoreModule::OnAssetClosed, EditedObject);
+            TabManager->SetOnPersistLayout(CloseWindowHandler);
+        }
     }
 }
 
