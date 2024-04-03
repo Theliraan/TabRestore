@@ -10,7 +10,7 @@ TabRestore - simple Unreal Editor plugin that restore closed tabs. Feel free to 
 - Simply restore closed tabs one-by-one
 - Unlimited buffer size
 - Easily configurable hotkeys
-- UnrealEngine 4.27 - 5.3 support
+- UnrealEngine 4.27 - 5.4 support
 
 ## Usage
 #### Way A

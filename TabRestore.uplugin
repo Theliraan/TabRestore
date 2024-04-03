@@ -1,7 +1,7 @@
 {
     "FileVersion": 1,
-    "Version": 3,
-    "VersionName": "1.0.3",
+    "Version": 4,
+    "VersionName": "1.0.4",
     "FriendlyName": "Tab Restore",
     "Description": "Add ability to restore closed tabs",
     "MarketplaceURL": "com.epicgames.launcher://ue/marketplace/product/f5f9d4ce7bac4dd5beec9cf98238a49a",
@@ -10,7 +10,7 @@
     "CreatedByURL": "https://github.com/Theliraan",
     "DocsURL": "https://github.com/Theliraan/TabRestore",
     "SupportURL": "theliraa@gmail.com",
-    "EngineVersion": "5.3.0",
+    "EngineVersion": "5.4.0",
     "EnabledByDefault": true,
     "CanContainContent": false,
     "IsBetaVersion": false,

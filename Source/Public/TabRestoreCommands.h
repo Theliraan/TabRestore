@@ -20,7 +20,7 @@ public:
 #else
             FEditorStyle::GetStyleSetName()
 #endif
-            )
+        )
     {
     }
 
