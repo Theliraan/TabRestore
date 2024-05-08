@@ -26,10 +26,10 @@ void FTabRestoreModule::StartupModule()
     IMainFrameModule& MainFrame = FModuleManager::LoadModuleChecked<IMainFrameModule>("MainFrame");
     MainFrame.GetMainFrameCommandBindings()->Append(PluginCommands.ToSharedRef());
 
-    if (ensure(GEditor))
+    if (ensureMsgf(GEditor, TEXT("Please report non-editor initialization case")))
     {
         AssetEditorSubsystem = GEditor->GetEditorSubsystem<UAssetEditorSubsystem>();
-        if (ensure(AssetEditorSubsystem.IsValid()))
+        if (ensureMsgf(AssetEditorSubsystem.IsValid(), TEXT("Please report invalid EditorSubsystem initialization case")))
         {
             OnAssetOpenedHandle = AssetEditorSubsystem->OnAssetOpenedInEditor().AddRaw(this, &FTabRestoreModule::OnAssetOpened);
         }
