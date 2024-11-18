@@ -6,10 +6,9 @@ public class TabRestore : ModuleRules
 {
     public TabRestore(ReadOnlyTargetRules Target) : base( Target )
     {
-        bEnableUndefinedIdentifierWarnings = false;
         bLegacyPublicIncludePaths = false;
 
-        PrivateDependencyModuleNames.AddRange(new string[]
+        PrivateDependencyModuleNames.AddRange(new []
         {
             "AssetManagerEditor",
             "Core",
