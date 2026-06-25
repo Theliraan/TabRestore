@@ -2,6 +2,7 @@
 
 #pragma once
 
+#include <Framework/Commands/InputChord.h>
 #include <UObject/Object.h>
 #include "TabRestoreSettings.generated.h"
 

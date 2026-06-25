@@ -6,20 +6,22 @@ public class TabRestore : ModuleRules
 {
     public TabRestore(ReadOnlyTargetRules Target) : base( Target )
     {
-        bLegacyPublicIncludePaths = false;
+	    bLegacyPublicIncludePaths = false;
 
-        PrivateDependencyModuleNames.AddRange(new []
-        {
-            "AssetManagerEditor",
+	    PublicDependencyModuleNames.AddRange([
+		    "Slate",
+		    "EditorStyle"
+	    ]);
+
+        PrivateDependencyModuleNames.AddRange([
+	        "AssetManagerEditor",
             "Core",
             "CoreUObject",
-            "EditorStyle",
             "Engine",
             "InputCore",
             "MainFrame",
-            "Slate",
             "SlateCore",
             "UnrealEd"
-        });
+        ]);
     }
 }

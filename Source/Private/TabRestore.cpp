@@ -1,11 +1,10 @@
 // Copyright 2023 Theliraan. All Rights Reserved.
 
 #include "TabRestore.h"
+#include <Editor.h>
 #include <Developer/Settings/Public/ISettingsModule.h>
 #include <Interfaces/IMainFrameModule.h>
 #include <Subsystems/AssetEditorSubsystem.h>
-#include <Runtime/Slate/Public/Framework/Docking/TabManager.h>
-
 #include "TabRestoreCommands.h"
 #include "TabRestoreSettings.h"
 

@@ -4,6 +4,7 @@
 
 #include <CoreMinimal.h>
 #include <Modules/ModuleManager.h>
+#include <Runtime/Slate/Public/Framework/Docking/TabManager.h>
 
 class IAssetEditorInstance;
 class FUICommandList;
